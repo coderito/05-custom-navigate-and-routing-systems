@@ -1,32 +1,30 @@
 import React from "react";
-import { Button } from "./Button";
-import { GoBell } from "react-icons/go";
-
+import { Accordion } from "./components/Accordion";
 export const App = () => {
-  const handleClick = () => {
-    console.log("click!");
-  };
+  const items = [
+    {
+      id: "1fasd",
+      label: "Can I use React on a project?",
+      content:
+        "React te ayuda a crear interfaces de usuario interactivas de forma sencilla. Diseña vistas simples para cada estado en tu aplicación, y React se encargará ...",
+    },
+    {
+      id: "1fasdaa",
+      label: "Can I use Javascript on a project?",
+      content:
+        "JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time) con funciones de primera clase.",
+    },
+    {
+      id: "1fasdbb",
+      label: "Can I use CSS on a project?",
+      content:
+        " Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos utilizado para describir la presentación de ..",
+    },
+  ];
 
   return (
     <div>
-      <div>
-        <Button primary outline rounded onClick={handleClick} className="mb-5">
-          <GoBell />
-          Click me!
-        </Button>
-      </div>
-      <div>
-        <Button secondary>Buy Now!</Button>
-      </div>
-      <div>
-        <Button success>See Deal!</Button>
-      </div>
-      <div>
-        <Button warning>See Deal!</Button>
-      </div>
-      <div>
-        <Button danger>See Deal!</Button>
-      </div>
+      <Accordion items={items} />
     </div>
   );
 };
